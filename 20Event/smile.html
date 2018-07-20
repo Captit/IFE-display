@@ -48,22 +48,24 @@
             setInterval(smileAni,100);*/
             
             //改进后
-            var div = document.getElementsByTagName("div")[0];
-            var yOffset = 0;
-            var con;
-            function smile() {
-                if (con) {
-                    yOffset -= 480;
-                } else {
-                    yOffset += 480;
+            window.onload = function() {
+                var div = document.getElementsByTagName("div")[0];
+                var yOffset = 0;
+                var con = true;
+                function smile() {
+                    if (con) {
+                        yOffset -= 480;
+                    } else {
+                        yOffset += 480;
+                    }
+                    if (yOffset == -7680 || yOffset == 0) {
+                        con = !con;
+                    }
+                    div.style.backgroundPosition = "0px " + yOffset + "px";
                 }
-                if (yOffset == -7680 || yOffset == 0) {
-                    con = !con;
-                }
-                div.style.backgroundPosition = "0px " + yOffset + "px";
+                setInterval(smile,100);
             }
-            
-            setInterval(smile,100);
+
         </script>
     </body>
 </html>
