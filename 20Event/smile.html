@@ -19,7 +19,6 @@
         <script>
             var div = document.getElementsByTagName("div")[0];
             var yOffset = 0;
-            var id1,id2;
             var con = 0;
             function smile() {
                 yOffset -= 480;
@@ -38,7 +37,7 @@
                 }
             }
             
-            function fun() {
+            function smileAni() {
                 if (con == 0) {
                     smile();
                 } else if (con == 1) {
@@ -46,7 +45,7 @@
                 }
             }
             
-            setInterval(fun,100);
+            setInterval(smileAni,100);
             
         </script>
     </body>
